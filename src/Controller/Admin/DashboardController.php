@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Contact;
 use App\Entity\Media;
 use App\Entity\Post;
 use App\Entity\User;
@@ -45,5 +46,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('User', 'fa fa-user', User::class);
         yield MenuItem::linkToCrud('Post', 'fa fa-newspaper-o', Post::class);
         yield MenuItem::linkToCrud('Media', 'fa fa-picture-o', Media::class);
+        yield MenuItem::linkToCrud('Contact', 'fa fa-envelope', Contact::class);
     }
 }

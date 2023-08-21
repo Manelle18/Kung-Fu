@@ -1,7 +1,49 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hung-gar Kung-Fu{% endblock %}
+{% block title %}Hung-gar Kung-Fu
+{% endblock %}
 
 {% block body %}
 
+    <section class="container w-25">
+
+        <h2 class="h3 mb-3 font-weight-normal">Contact</h2>
+
+
+        {{ form_errors(formContact) }}
+
+        {{ form_start(formContact) }}
+            <div class="mb-3 d-flex">
+                <div class="me-3">
+                    {{ form_label(formContact.nom) }}
+                    {{ form_widget(formContact.nom) }}
+                </div>
+                <div>
+                    {{ form_label(formContact.prenom) }}
+                    {{ form_widget(formContact.prenom) }}
+                </div>
+            </div>
+
+            <div class="mb-3">
+                {{ form_label(formContact.email) }}
+                {{ form_widget(formContact.email) }}
+                <div id="emailHelp" class="form-text">Votre email ne sera pas partagé.</div>
+            </div>
+
+            <div class="mb-3">
+                {{ form_label(formContact.sujet) }}
+                {{ form_widget(formContact.sujet) }}
+            </div>
+
+            <div class="mb-3">
+                {{ form_label(formContact.message) }}
+                {{ form_widget(formContact.message) }}    
+            </div>
+
+            <button type="submit" class="btn btn-lg btn-primary mb-5">Envoyer</button>
+        {{ form_end(formContact) }}
+
+    </section
+
 {% endblock %}
+
