@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hung-gar Kung-Fu{% endblock %}
+
+{% block body %}
+<div class='container'>
+    <h1>Résultats</h1>
+    <div class="resultats-container">
+        {% for resultat in resultats %}
+        <div class="resultat-item">
+            <img src="{{ asset('assets/images/' ~ resultat.media) }}" alt="{{ resultat.nom }}" class="taille">
+            <h2>{{ resultat.prenom }} {{ resultat.nom }} </h2>
+            <p>{{ resultat.message }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
