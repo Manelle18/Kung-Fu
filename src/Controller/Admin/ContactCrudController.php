@@ -21,7 +21,7 @@ class ContactCrudController extends AbstractCrudController
             TextField::new('prenom'),
             TextField::new('email'),
             TextField::new('sujet'),
-            TextEditorField::new('message'),
+            TextField::new('message'),
         ];
     }
 }

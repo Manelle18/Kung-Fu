@@ -29,6 +29,24 @@ class Post
     #[ORM\OneToOne(cascade: ['persist', 'remove'])]
     private ?Media $media = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $ceinture = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $championnat_france = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $coupe_france = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $open_france = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $categorie = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $poids = null;
+
     public function __construct()
     {
 
@@ -95,6 +113,78 @@ class Post
     public function setMedia(?Media $media): self
     {
         $this->media = $media;
+
+        return $this;
+    }
+
+    public function getCeinture(): ?string
+    {
+        return $this->ceinture;
+    }
+
+    public function setCeinture(?string $ceinture): self
+    {
+        $this->ceinture = $ceinture;
+
+        return $this;
+    }
+
+    public function getChampionnatFrance(): ?string
+    {
+        return $this->championnat_france;
+    }
+
+    public function setChampionnatFrance(?string $championnat_france): self
+    {
+        $this->championnat_france = $championnat_france;
+
+        return $this;
+    }
+
+    public function getCoupeFrance(): ?string
+    {
+        return $this->coupe_france;
+    }
+
+    public function setCoupeFrance(?string $coupe_france): self
+    {
+        $this->coupe_france = $coupe_france;
+
+        return $this;
+    }
+
+    public function getOpenFrance(): ?string
+    {
+        return $this->open_france;
+    }
+
+    public function setOpenFrance(?string $open_france): self
+    {
+        $this->open_france = $open_france;
+
+        return $this;
+    }
+
+    public function getCategorie(): ?string
+    {
+        return $this->categorie;
+    }
+
+    public function setCategorie(string $categorie): self
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    public function getPoids(): ?string
+    {
+        return $this->poids;
+    }
+
+    public function setPoids(string $poids): self
+    {
+        $this->poids = $poids;
 
         return $this;
     }

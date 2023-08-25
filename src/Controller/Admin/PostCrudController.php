@@ -22,10 +22,16 @@ class PostCrudController extends AbstractCrudController
         return [
             TextField::new('prenom'),
             TextField::new('nom'),
-            TextEditorField::new('message'),
+            TextField::new('message'),
             // ImageField::new('media')
             //     ->setUploadDir('/public/assets/images')
             //     ->setUploadedFileNamePattern('[contenthash].[extension]'),
+            TextField::new('ceinture'),
+            TextField::new('championnat_france'),
+            TextField::new('coupe_france'),
+            TextField::new('open_france'),
+            TextField::new('categorie'),
+            TextField::new('poids'),
             AssociationField::new('media')
                 ->autocomplete(),
             AssociationField::new('user')

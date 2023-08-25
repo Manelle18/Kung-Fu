@@ -127,37 +127,31 @@ th {
             margin-bottom: 20px;
 }
 
-.resultats-container {
-  display: flex;
-  flex-direction: column; /* Les résultats sont affichés en colonne */
+.result-text {
+  width: 30%;
 }
-
-.resultat-item {
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.resultat-item img {
-  width: 50%;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.resultat-item h2 {
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.resultat-item p {
-  font-size: 14px;
-  color: #666;
+.taille-result{
+  width: 15%;
 }
 
 .contact 
-{
+{  
+  
+  background-image: url(/assets/images/64ba4d8cca86e.png);
+  height: 490px;
   text-align: center;
-            margin-bottom: 30px;
-            color: #e2cd12;
+ 
+  color: #000000;
+  border: 10px solid;
+  background-repeat: no-repeat;
+  border-color :goldenrod
+
+  
 }
+
+ /* partenaires */
+.partenaires{
+height: 50px;
+width: 100px;
+}
+

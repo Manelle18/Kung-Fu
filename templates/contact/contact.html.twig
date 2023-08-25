@@ -4,16 +4,15 @@
 {% endblock %}
 
 {% block body %}
+<body class"colorfond">
+    <section class="contact container w-25  text-light">
 
-    <section class="container w-25">
-
-        <h2 class="h3 mb-3 font-weight-normal">Contact</h2>
-
+        <h2 class="h3 mb-2 font-weight-normal mt-3 text-warning ">CONTACT</h2>
 
         {{ form_errors(formContact) }}
 
         {{ form_start(formContact) }}
-            <div class="mb-3 d-flex">
+            <div class="mb-3 d-flex text-li">
                 <div class="me-3">
                     {{ form_label(formContact.nom) }}
                     {{ form_widget(formContact.nom) }}
@@ -27,7 +26,7 @@
             <div class="mb-3">
                 {{ form_label(formContact.email) }}
                 {{ form_widget(formContact.email) }}
-                <div id="emailHelp" class="form-text">Votre email ne sera pas partagé.</div>
+                <div id="emailHelp" class="form-text text-light">Votre email ne sera pas partagé.</div>
             </div>
 
             <div class="mb-3">
@@ -40,10 +39,11 @@
                 {{ form_widget(formContact.message) }}    
             </div>
 
-            <button type="submit" class="btn btn-lg btn-primary mb-5">Envoyer</button>
+            <button type="submit" class="btn btn-lg btn-warning mb-5">Envoyer</button>
         {{ form_end(formContact) }}
 
     </section
+    </body>
 
 {% endblock %}
 
